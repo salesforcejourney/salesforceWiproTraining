@@ -1,0 +1,12 @@
+{
+  "data": {
+    "schema": "fKlLuTnXr5M80lSPTEoA7A",
+    "payload": {
+      "CreatedById": "0052w00000FsIKQAA3",
+      "message__c": "Welcome to learn platform Event",
+      "CreatedDate": "2023-04-14T07:24:26Z"
+    },
+    "event": { "replayId": 13177047 }
+  },
+  "channel": "/event/Communication_Message__e"
+}
