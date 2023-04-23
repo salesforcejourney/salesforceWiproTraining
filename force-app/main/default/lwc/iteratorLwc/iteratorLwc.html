@@ -1,0 +1,37 @@
+<template>
+  <lightning-card title="For Each Demo - Array" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <template for:each={carList} for:item="car">
+        <p key={car}>{car}</p>
+      </template>
+    </div>
+  </lightning-card>
+  <lightning-card
+    title="For Each Demo - Complex Array"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <template for:each={coeList} for:item="coe">
+        <p key={coe.id}>{coe.coename} ==> {coe.orgname}</p>
+      </template>
+    </div>
+  </lightning-card>
+  <lightning-card
+    title="Iterator Demo - Complex Array"
+    icon-name="custom:custom14"
+  >
+    <template iterator:it={coeList}>
+      <div key={it.value.id}>
+        <div
+          if:true={it.first}
+          style="background-color: green; padding-top: 5px"
+        ></div>
+        {it.value.coename} ===> {it.value.orgname}
+        <div
+          if:true={it.last}
+          style="background-color: blue; padding-bottom: 5px"
+        ></div>
+      </div>
+    </template>
+  </lightning-card>
+</template>

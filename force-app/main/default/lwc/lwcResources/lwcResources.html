@@ -1,0 +1,33 @@
+<template>
+  <lightning-card title="LWC User Resource" icon-name="custom:custom14">
+    <lightning-input
+      type="text"
+      label="Enter Message"
+      onchange={changeHandler}
+      value={message}
+    ></lightning-input>
+  </lightning-card>
+  <lightning-card title="LWC User Resource" icon-name="custom:custom14">
+    <p>User ID {userId}</p>
+    <p>Is Guest {isGuest}</p>
+  </lightning-card>
+  <lightning-card
+    title="LWC Image Resource And Third Party CSS"
+    icon-name="custom:custom14"
+  >
+    <img
+      src={logo}
+      alt="Logo Photo"
+      class="animate__animated animate__backInUp animate__delay-5s"
+    />
+  </lightning-card>
+  <lightning-card title="Third Party JS" icon-name="custom:custom14">
+    {currDate}
+  </lightning-card>
+  <lightning-card title="Third Party JS" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-input label={Labels.enterName}></lightning-input>
+      <lightning-input label={Labels.enterIndustry}></lightning-input>
+    </div>
+  </lightning-card>
+</template>

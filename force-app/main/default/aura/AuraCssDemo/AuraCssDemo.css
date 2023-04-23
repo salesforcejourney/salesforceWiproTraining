@@ -1,0 +1,15 @@
+.THIS.outsidecard {
+  background-color: brown;
+}
+.THIS .formattag {
+  background-color: burlywood;
+}
+
+.THIS .dynamicClass {
+  background-color: chartreuse;
+  font-size: large;
+}
+
+.THIS .dynamicDisplay {
+  display: none;
+}

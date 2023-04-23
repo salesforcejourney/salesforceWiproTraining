@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title="Opportunity by Stages" icon-name="custom:custom14">
+    <template lwc:if={opportunities}>
+      <template for:each={opportunities} for:item="opp">
+        <p class={opp.dynamicbadge} key={opp.Id}>
+          {opp.Name} : {opp.stageSummary}
+        </p>
+      </template>
+    </template>
+    <template lwc:elseif={opperror}>
+      <p>{opperror}</p>
+    </template>
+  </lightning-card>
+</template>

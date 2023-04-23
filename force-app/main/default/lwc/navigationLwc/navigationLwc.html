@@ -1,0 +1,40 @@
+<template>
+  <lightning-card title="Navigation in LWC" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Navigate to Home"
+        onclick={homeHandler}
+      ></lightning-button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Navigate to Account Home Page"
+        onclick={accountHomeHandler}
+      ></lightning-button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Navigate to Account List View"
+        onclick={accountListViewHandler}
+      ></lightning-button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Create New Account"
+        onclick={accountnewHandler}
+      ></lightning-button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Create New Account With Defaults"
+        onclick={accountnewwithDefaultHandler}
+      ></lightning-button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Quick Account Creation"
+        onclick={quickAccountHandler}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

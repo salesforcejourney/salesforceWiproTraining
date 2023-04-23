@@ -1,0 +1,46 @@
+<template>
+  <lightning-card
+    title="Account Using Imperative Apex"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Account Name"
+        placeholder="Enter Account Name"
+        onchange={changeHandler}
+        required="true"
+        name="accname"
+        value={rec.Name}
+        minlength="2"
+        max-length="70"
+        message-when-value-missing="Account name is mandatory"
+        message-when-too-short="Account name is too short"
+        message-when-too-long="Account name maximum of 70 characters"
+      ></lightning-input>
+      <lightning-input
+        label="Industry"
+        placeholder="Enter Industry"
+        onchange={changeHandler}
+        name="accindustry"
+        value={rec.Industry}
+        class="industry"
+      ></lightning-input>
+      <lightning-input
+        label="Phone"
+        type="tel"
+        placeholder="Enter Phone no"
+        onchange={changeHandler}
+        name="accphone"
+        value={rec.Phone}
+        message-when-type-mismatch="Enter input is not a valid phone type"
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Create Account"
+        variant="brand"
+        onclick={clickHandler}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

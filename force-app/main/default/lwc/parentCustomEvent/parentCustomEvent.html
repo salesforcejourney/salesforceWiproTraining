@@ -1,0 +1,22 @@
+<template>
+  <lightning-card
+    title="Custom Event Demo : Show Modal"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Show Modal"
+        variant="brand"
+        onclick={clickHandler}
+      ></lightning-button>
+    </div>
+    <template lwc:if={showModal}>
+      <div class="slds-var-m-around_small">
+        <!--Step 3 : handle the event-->
+        <c-child-custom-event
+          onclosemodal={closeModalHandler}
+        ></c-child-custom-event>
+      </div>
+    </template>
+  </lightning-card>
+</template>

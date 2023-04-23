@@ -1,0 +1,67 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,force:hasSObjectName,force:hasRecordId"
+>
+  <lightning:card title="Validation" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning:input
+        label="Enter Account Name"
+        required="true"
+        type="text"
+        minlength="3"
+        messageWhenValueMissing="Account Name is Mandatory"
+        messageWhenTooShort="Enter valid Account name with minimum 3 characters"
+        aura:id="inputText"
+      >
+      </lightning:input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:input
+        type="email"
+        label="Account Email"
+        messageWhenTypeMismatch="Entered Email is not in valid format"
+        aura:id="inputField"
+      ></lightning:input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:input
+        type="number"
+        label="Enter Revenue"
+        min="1"
+        max="5000"
+        messageWhenRangeOverflow="Please enter value less than 5000"
+        messageWhenRangeUnderflow="Please enter value greater than 1"
+        aura:id="inputField"
+      ></lightning:input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <!--If industry is other than Energy : populate error message : Please entery Energy Industry-->
+      <lightning:input
+        label="Industry"
+        type="text"
+        aura:id="inputIndustry"
+      ></lightning:input>
+    </div>
+
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Validate Name"
+        variant="brand"
+        onclick="{!c.clickHandler}"
+      ></lightning:button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Validate Email and Revenue"
+        variant="brand"
+        onclick="{!c.validateEmailAndRevenue}"
+      ></lightning:button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Validate Industry"
+        variant="brand"
+        onclick="{!c.validateIndustry}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+</aura:component>

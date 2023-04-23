@@ -1,0 +1,16 @@
+<template>
+  <!--Get the input as industry-->
+  <lightning-card title="Enter Industry" icon-name="custom:custom14">
+    <lightning-input
+      type="search"
+      placeholder="Enter Industry"
+      variant="label-hidden"
+      onchange={changeHandler}
+    ></lightning-input>
+    <lightning-button
+      label="Search"
+      variant="brand"
+      onclick={clickHandler}
+    ></lightning-button>
+  </lightning-card>
+</template>

@@ -1,0 +1,40 @@
+<template>
+  <lightning-card
+    title="Lightning Record Form to Create Record"
+    icon-name="custom:custom14"
+  >
+    <lightning-record-form
+      class="slds-var-m-around_small"
+      object-api-name={objectApiName}
+      layout-type="Compact"
+      columns="2"
+      onsuccess={successHandler}
+    ></lightning-record-form>
+  </lightning-card>
+
+  <lightning-card
+    title="Lightning Record Form to edit record"
+    icon-name="custom:custom14"
+  >
+    <lightning-record-form
+      mode="edit"
+      object-api-name={objectApiName}
+      record-id={recordId}
+      fields={fieldList}
+      onsuccess={editSuccessHandler}
+    ></lightning-record-form>
+  </lightning-card>
+
+  <lightning-card
+    title="Lightning Record Form to view record"
+    icon-name="custom:custom14"
+  >
+    <lightning-record-form
+      mode="readonly"
+      object-api-name={objectApiName}
+      record-id={recordId}
+      layout-type="Full"
+      columns="2"
+    ></lightning-record-form>
+  </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+
+<lightning:card title="Local Id Demo" iconName = "custom:custom14">
+    
+    <lightning:button variant="brand" label="Add" aura:id = "addidentifier" />
+ 
+    <lightning:button variant="brand" label="Sum" aura:id = "addidentifier" />
+    <lightning:button variant="brand" label="Sub" name = "subtract two numbers" aura:id = "subidentifier"/>
+    <lightning:button variant="success" label="Check Output"  onclick="{! c.handleClick }"></lightning:button> 
+
+</lightning:card> 
+
+</aura:component>	

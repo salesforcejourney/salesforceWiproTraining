@@ -1,0 +1,41 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <!--Attribute-->
+  <aura:attribute
+    name="Welcome"
+    type="String"
+    default="Greeting"
+  ></aura:attribute>
+
+  <aura:attribute name="oldValue" type="String" default=""></aura:attribute>
+
+  <!--Handlers-->
+  <aura:handler
+    name="change"
+    value="{!v.Welcome}"
+    action="{!c.welcomeChangeHandler}"
+  ></aura:handler>
+
+  <!--Body-->
+  <lightning:Card title="Change Event" iconName="custom:custom14">
+    <lightning:button
+      label="Change Text"
+      variant="brand"
+      onclick="{!c.clickHandler}"
+    ></lightning:button>
+    <div class="slds-var-m-around_small">
+      <p>
+        New Value :
+        <lightning:formattedText value="{!v.Welcome}"></lightning:formattedText>
+      </p>
+      <p>
+        Old Value :
+        <lightning:formattedText
+          value="{!v.oldValue}"
+        ></lightning:formattedText>
+      </p>
+    </div>
+  </lightning:Card>
+</aura:component>

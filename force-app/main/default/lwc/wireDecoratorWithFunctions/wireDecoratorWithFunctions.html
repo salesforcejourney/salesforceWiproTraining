@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title="LWC Wire Functions" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <template lwc:if={accounts}>
+        <template for:each={accounts} for:item="account">
+          <p key={account.Id}>{account.Name}</p>
+        </template>
+      </template>
+      <template lwc:elseif={accounterror}>
+        <p>{accounterror}</p>
+      </template>
+    </div>
+  </lightning-card>
+</template>

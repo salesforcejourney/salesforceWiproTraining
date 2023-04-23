@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+  <lightning:messageChannel
+    type="AuraMessageChannel__c"
+    onMessage="{!c.AuraMessageChannelSubscriber}"
+  ></lightning:messageChannel>
+
+  <!--Attributes-->
+  <aura:attribute name="message" type="String" default=""></aura:attribute>
+
+  <!--Body-->
+  <lightning:card title="Aura Subscriber Using LMS" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning:formattedText value="{!v.message}"></lightning:formattedText>
+    </div>
+  </lightning:card>
+</aura:component>

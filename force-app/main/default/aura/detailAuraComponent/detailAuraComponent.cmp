@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+  <!--Attribute-->
+  <aura:attribute name="accrecid" type="String"></aura:attribute>
+  <aura:attribute
+    name="showRecordForm"
+    type="boolean"
+    default="false"
+  ></aura:attribute>
+  <!--Message Channel-->
+  <lightning:messageChannel
+    type="ShowAccountDetail__c"
+    onMessage="{!c.showAccountDetailHandler}"
+  ></lightning:messageChannel>
+  <!--Body-->
+  <aura:if isTrue="{!v.showRecordForm}">
+    <lightning:card title="Display Account Details" iconName="standard:account">
+      <div class="slds-var-m-around_small">
+        <lightning:recordForm
+          recordId="{!v.accrecid}"
+          objectApiName="Account"
+          layoutType="Full"
+          mode="readonly"
+          columns="2"
+        >
+        </lightning:recordForm>
+      </div>
+    </lightning:card>
+  </aura:if>
+</aura:component>

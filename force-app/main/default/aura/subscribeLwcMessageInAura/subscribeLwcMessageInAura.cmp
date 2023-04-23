@@ -1,0 +1,13 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,force:hasSObjectName,force:hasRecordId"
+>
+  <aura:attribute name="messagefromlwc" type="String"></aura:attribute>
+  <lightning:messageChannel
+    type="sampleMessage__c"
+    onMessage="{!c.handleMessage}"
+  ></lightning:messageChannel>
+
+  <lightning:card title="Aura Subscriber" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">{!v.messagefromlwc}</div>
+  </lightning:card>
+</aura:component>

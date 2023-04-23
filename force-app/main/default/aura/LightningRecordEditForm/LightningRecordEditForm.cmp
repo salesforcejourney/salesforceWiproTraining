@@ -1,0 +1,29 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,force:hasSObjectName,force:hasRecordId"
+>
+  <lightning:notificationsLibrary aura:id="notifLib" />
+  <lightning:card title="Lightning Record Edit Form">
+    <lightning:recordEditForm
+      recordId="{!v.recordId}"
+      objectApiName="{!v.sObjectName}"
+      onsuccess="{!c.editsucccesshandler}"
+    >
+      <div class="slds-var-m-around_small">
+        <div class="slds-text-color_success slds-text-heading_large">
+          <p>Account Edit Form</p>
+        </div>
+        <lightning:outputField fieldName="Name"></lightning:outputField>
+        <lightning:inputField fieldName="Rating"></lightning:inputField>
+        <lightning:inputField fieldName="Industry"></lightning:inputField>
+        <lightning:inputField fieldName="AnnualRevenue"></lightning:inputField>
+      </div>
+      <div class="slds-var-m-around_small">
+        <lightning:button
+          type="submit"
+          variant="brand"
+          label="Update"
+        ></lightning:button>
+      </div>
+    </lightning:recordEditForm>
+  </lightning:card>
+</aura:component>

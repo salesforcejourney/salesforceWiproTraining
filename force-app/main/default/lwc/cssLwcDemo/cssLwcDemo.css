@@ -1,0 +1,44 @@
+@import "c/cssLibrary";
+
+h1 {
+  color: blue;
+  font-size: 30px;
+  border: 1px solid red;
+}
+
+.training {
+  color: blueviolet;
+  font-size: x-large;
+}
+
+.training:hover {
+  font-size: 50px;
+  color: red;
+}
+
+.lwc {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.javascript {
+  width: 80%;
+  background-color: blue;
+}
+
+.box-color {
+  border: 2px solid red;
+  background-color: blue;
+}
+
+.designtokendemo {
+  color: var(--lwc-brandAccessible);
+  background: var(--lwc-colorBackgroundAltInverse);
+}
+
+.btnclass {
+  --slds-c-button-brand-color-background: orange;
+  --slds-c-button-brand-color-background-hover: orange;
+  --slds-c-button-brand-color-border: orange;
+  --slds-c-button-brand-color-border-hover: orange;
+}

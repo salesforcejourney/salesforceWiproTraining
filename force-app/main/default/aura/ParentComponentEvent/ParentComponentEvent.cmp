@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+  <!--Attribute-->
+  <aura:attribute
+    name="messagefromchild"
+    type="String"
+    default=""
+  ></aura:attribute>
+  <!--Aura Handling-->
+  <aura:handler
+    name="messageaura"
+    event="c:MessageAuraEvent"
+    action="{!c.messageAuraHandler}"
+  ></aura:handler>
+
+  <!--Body-->
+  <lightning:card title="Parent Component" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <c:childComponentEvent></c:childComponentEvent>
+    </div>
+    <div class="slds-var-m-around_small">
+      <p>
+        Message from Child Component :
+        <lightning:formattedText
+          value="{!v.messagefromchild}"
+        ></lightning:formattedText>
+      </p>
+    </div>
+  </lightning:card>
+</aura:component>

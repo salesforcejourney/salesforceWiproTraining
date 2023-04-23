@@ -1,0 +1,105 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,force:hasSObjectName,force:hasRecordId"
+>
+  <aura:attribute
+    name="fields"
+    type="String[]"
+    default="['Name','Rating','Industry','AnnualRevenue']"
+  ></aura:attribute>
+  <!--Step 1-->
+  <lightning:navigation aura:id="navservice"></lightning:navigation>
+  <!--Show Notifications-->
+  <lightning:notificationsLibrary aura:id="notifLib" />
+
+  <!--Create Account with Limited Fields-->
+  <lightning:card
+    title="Create Account with Limited Fields"
+    iconName="custom:custom14"
+  >
+    <lightning:recordForm
+      aura:id="createrecordform"
+      objectApiName="{!v.sObjectName}"
+      fields="{!v.fields}"
+      columns="2"
+      onsuccess="{!c.createSuccessHandler}"
+      onsubmit="{!c.createSubmitHandler}"
+    >
+    </lightning:recordForm>
+  </lightning:card>
+
+  <!--View Account with Limited Fields in edit mode-->
+  <lightning:card
+    title="View Account with Limited Fields in edit mode"
+    iconName="custom:custom14"
+  >
+    <lightning:recordForm
+      recordId="{!v.recordId}"
+      objectApiName="{!v.sObjectName}"
+      fields="{!v.fields}"
+      mode="edit"
+      columns="2"
+      onsuccess="{!c.successEditHandler}"
+    >
+    </lightning:recordForm>
+  </lightning:card>
+
+  <!--View Account with Limited Fields in readonly mode-->
+  <lightning:card
+    title="View Account with Limited Fields in readonly mode"
+    iconName="custom:custom14"
+  >
+    <lightning:recordForm
+      recordId="{!v.recordId}"
+      objectApiName="{!v.sObjectName}"
+      fields="{!v.fields}"
+      mode="readonly"
+      columns="2"
+    >
+    </lightning:recordForm>
+  </lightning:card>
+
+  <!--View Account with Limited Fields-->
+  <lightning:card
+    title="View Account with Limited Fields"
+    iconName="custom:custom14"
+  >
+    <lightning:recordForm
+      recordId="{!v.recordId}"
+      objectApiName="{!v.sObjectName}"
+      fields="{!v.fields}"
+      mode="view"
+      columns="2"
+    >
+    </lightning:recordForm>
+  </lightning:card>
+
+  <!--View Account with Compact Layout-->
+  <lightning:card
+    title="View Account with Compact Layout"
+    iconName="custom:custom14"
+  >
+    <lightning:recordForm
+      recordId="{!v.recordId}"
+      objectApiName="{!v.sObjectName}"
+      layoutType="Compact"
+      mode="view"
+      columns="2"
+    >
+    </lightning:recordForm>
+  </lightning:card>
+
+  <!--View Account with Full Layout-->
+  <lightning:card
+    title="View Account with Full Layout"
+    iconName="custom:custom14"
+  >
+    <lightning:recordForm
+      recordId="{!v.recordId}"
+      objectApiName="{!v.sObjectName}"
+      layoutType="Full"
+      mode="view"
+      columns="2"
+    >
+    </lightning:recordForm>
+  </lightning:card>
+</aura:component>

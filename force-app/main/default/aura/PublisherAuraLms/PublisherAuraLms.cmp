@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+  <lightning:messageChannel
+    type="AuraMessageChannel__c"
+    aura:id="lmsid"
+  ></lightning:messageChannel>
+  <lightning:card title="Aura Publisher Using LMS" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Publish Using LMS"
+        variant="brand"
+        onclick="{!c.clickHandler}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+</aura:component>

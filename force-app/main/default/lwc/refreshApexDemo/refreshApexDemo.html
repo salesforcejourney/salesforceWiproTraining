@@ -1,0 +1,36 @@
+<template>
+  <lightning-card title="Opportunity Closed" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_2-of-3">
+          <lightning-input
+            type="search"
+            placeholder="Enter Opportunity Amount"
+            variant="label-hidden"
+            onchange={changeHandler}
+          ></lightning-input>
+        </div>
+      </div>
+    </div>
+    <div class="slds-var-m-around_small">
+      <template lwc:if={opportunities}>
+        <template for:each={opportunities} for:item="opportunity">
+          <p key={opportunity.Id}>
+            {opportunity.Name} ==> {opportunity.StageName} ==>
+            {opportunity.Account.Name}
+          </p>
+        </template>
+      </template>
+      <template lwc:if={oppError}>
+        <p>{oppError}</p>
+      </template>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        variant="brand"
+        label="Mark Opportunity as Closed"
+        onclick={closedOppHandler}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

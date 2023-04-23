@@ -1,0 +1,19 @@
+<template>
+  <lightning-card title="List of Accounts" icon-name="standard:account">
+    <template lwc:if={selectedRec}>
+      <p>Selected Account : {selectedRec.Name}</p>
+    </template>
+    <div class="slds-var-m-around_small">
+      <template lwc:if={accounts}>
+        <template for:each={accounts} for:item="account">
+          <c-account-tile-lwc
+            onselectedrec={selectedRecHandler}
+            key={account.Id}
+            accountile={account}
+          ></c-account-tile-lwc>
+        </template>
+      </template>
+      <template lwc:if={error}> {error} </template>
+    </div>
+  </lightning-card>
+</template>

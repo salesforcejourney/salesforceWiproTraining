@@ -1,0 +1,5 @@
+<aura:component>
+  <aura:method name="childMessageMethod" action="{!c.getMessage}">
+    <aura:attribute name="childMessage" type="String"></aura:attribute>
+  </aura:method>
+</aura:component>

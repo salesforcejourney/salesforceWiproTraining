@@ -1,0 +1,53 @@
+<template>
+  <lightning-card title="LWC Calculator" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Enter Number 1"
+        required="true"
+        placeholder="Enter Number 1"
+        name="number1"
+        onchange={numberChangeHandler}
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Enter Number 2"
+        required="true"
+        placeholder="Enter Number 2"
+        onchange={numberChangeHandler}
+        name="number2"
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Add"
+        variant="brand"
+        onclick={clickHandler}
+      ></lightning-button>
+      <lightning-button
+        label="Sub"
+        variant="brand"
+        onclick={clickHandler}
+        class="slds-var-m-around_small"
+      ></lightning-button>
+      <lightning-button
+        label="Mul"
+        variant="brand"
+        onclick={clickHandler}
+        class="slds-var-m-around_small"
+      ></lightning-button>
+      <lightning-button
+        label="Div"
+        variant="brand"
+        onclick={clickHandler}
+        class="slds-var-m-around_small"
+      ></lightning-button>
+    </div>
+    <template lwc:if={showResult}>
+      <div class="slds-var-m-around_small">
+        <lightning-formatted-number value={result}></lightning-formatted-number>
+        <div class="slds-var-m-around_small">{outtext}</div>
+      </div>
+    </template>
+  </lightning-card>
+</template>

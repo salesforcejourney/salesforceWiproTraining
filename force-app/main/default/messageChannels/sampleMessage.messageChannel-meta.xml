@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This message channel will be used to Publish LWC Message</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>This attribute is used to send the message</description>
+        <fieldName>lmsData</fieldName>
+    </lightningMessageFields>
+    <masterLabel>SampleMessageChannel</masterLabel>
+</LightningMessageChannel>

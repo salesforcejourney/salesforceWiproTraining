@@ -1,0 +1,33 @@
+<template>
+  <lightning-card title="Create Record Adapter" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        name="fname"
+        label="First Name"
+        onchange={changeHandler}
+        value={conRecord.firstName}
+      ></lightning-input>
+      <lightning-input
+        name="lname"
+        label="Last Name"
+        onchange={changeHandler}
+        required="true"
+        value={conRecord.lastName}
+        message-when-value-missing="Lastname is mandatory"
+      ></lightning-input>
+      <lightning-input
+        name="phone"
+        label="Phone"
+        onchange={changeHandler}
+        value={conRecord.phone}
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Create Contact"
+        variant="brand"
+        onclick={clickHandler}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

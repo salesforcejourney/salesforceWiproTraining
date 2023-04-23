@@ -1,0 +1,16 @@
+<apex:page>
+    <apex:includeLightning></apex:includeLightning>
+    <div id ="calculatorid"></div>
+
+    <script>
+        $Lightning.use("c:CalculatorApp",function(){
+            $Lightning.createComponent("c:AuraCalculator",{
+                Number1 : "50",
+                Number2 : "5"
+            },"calculatorid",function(){
+                //postactions
+                console.log('Component Inserted Successfully')
+            })
+        })
+    </script>
+</apex:page>

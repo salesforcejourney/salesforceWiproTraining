@@ -1,0 +1,22 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <lightning:Card title="Share Javascript Code" iconName="custom:custom14">
+    <lightning:button
+      label="Show Message"
+      variant="brand"
+      onclick="{!c.messageHandler}"
+    ></lightning:button>
+    <lightning:button
+      label="Show Greeting"
+      variant="brand"
+      onclick="{!c.greetingHandler}"
+    ></lightning:button>
+    <lightning:button
+      label="Say Hello"
+      variant="brand"
+      onclick="{!c.helloHandler}"
+    ></lightning:button>
+  </lightning:Card>
+</aura:component>

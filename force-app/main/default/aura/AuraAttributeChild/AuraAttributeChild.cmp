@@ -1,0 +1,21 @@
+<aura:component>
+  <aura:attribute name="childboundvariable" type="String"></aura:attribute>
+
+  <aura:attribute name="childunboundvariable" type="String"></aura:attribute>
+
+  <lightning:card title="Aura Attribute Child" iconName="custom:custom14">
+    <p class="slds-var-m-around_small">I am Child Component</p>
+    <div class="slds-var-m-around_small">
+      <p>childboundvariable : {!v.childboundvariable}</p>
+      <p>childunboundvariable : {!v.childunboundvariable}</p>
+    </div>
+
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Change Child Values"
+        variant="brand"
+        onclick="{!c.clickHandler}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+</aura:component>

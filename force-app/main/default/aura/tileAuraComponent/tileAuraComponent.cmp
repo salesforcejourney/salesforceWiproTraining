@@ -1,0 +1,43 @@
+<aura:component>
+  <!--Aura Attributes-->
+  <aura:attribute name="accrec" type="Account"></aura:attribute>
+  <!--Register Event-->
+  <aura:registerEvent
+    name="sendaccountname"
+    type="c:SendAccountDetail"
+  ></aura:registerEvent>
+  <!--Message Channel-->
+  <lightning:messageChannel
+    type="ShowAccountDetail__c"
+    aura:id="lmsid"
+  ></lightning:messageChannel>
+  <!--Body-->
+  <a href="javascript:void(0)" onclick="{!c.clickHandler}">
+    <div class="slds-var-p-around_small slds-box slds-box_x-small">
+      <lightning:card title="{!v.accrec.Name}" iconName="standard:account">
+        <div class="slds-var-m-around_small">
+          <p>
+            Industry :
+            <lightning:formattedText
+              value="{!v.accrec.Industry}"
+            ></lightning:formattedText>
+          </p>
+          <p>
+            Rating :
+            <lightning:formattedText
+              value="{!v.accrec.Rating}"
+            ></lightning:formattedText>
+          </p>
+          <p>
+            Annual Revenue :
+            <lightning:formattedNumber
+              value="{!v.accrec.AnnualRevenue}"
+              style="currency"
+              currencyCode="USD"
+            ></lightning:formattedNumber>
+          </p>
+        </div>
+      </lightning:card>
+    </div>
+  </a>
+</aura:component>

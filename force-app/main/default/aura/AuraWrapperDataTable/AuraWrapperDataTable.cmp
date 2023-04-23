@@ -1,0 +1,40 @@
+<aura:component
+  controller="AccountHelper"
+  implements="flexipage:availableForAllPageTypes,force:hasRecordId"
+>
+  <!--Attribute-->
+  <aura:attribute name="acccountcontactwrapper" type="object"></aura:attribute>
+  <aura:attribute name="columns" type="List"></aura:attribute>
+  <!--Aura Handlers-->
+  <aura:handler
+    name="init"
+    value="{!this}"
+    action="{!c.initHandler}"
+  ></aura:handler>
+
+  <!--Body-->
+  <lightning:card title="Aura Example with Wrapper" iconName="custom:custom14">
+    <p class="slds-var-m-around_small">
+      <lightning:formattedText
+        value="{!v.acccountcontactwrapper.accRecord.Name}"
+      ></lightning:formattedText>
+      -
+      <lightning:formattedText
+        value="{!v.acccountcontactwrapper.accRecord.Industry }"
+      ></lightning:formattedText>
+    </p>
+    <p class="slds-var-m-around_small">
+      Number of Contacts :
+      <lightning:formattedNumber
+        value="{!v.acccountcontactwrapper.contactCount}"
+      ></lightning:formattedNumber>
+    </p>
+    <div class="slds-var-m-around_small">
+      <lightning:datatable
+        keyField="id"
+        data="{!v.acccountcontactwrapper.conList}"
+        columns="{!v.columns}"
+      ></lightning:datatable>
+    </div>
+  </lightning:card>
+</aura:component>

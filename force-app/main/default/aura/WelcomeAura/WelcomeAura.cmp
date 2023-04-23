@@ -1,0 +1,13 @@
+<!--Add Markup 
+it is only required file 
+there will be only one file with .cmp extension -->
+
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+	
+<lightning:card title="Aura Component Training" iconName = "custom:custom11">
+        <p class="slds-p-horizontal_small">
+            <div class="slds-text-heading_medium">We have created component on Devloper Console</div>
+        </p>
+</lightning:card>
+
+</aura:component>

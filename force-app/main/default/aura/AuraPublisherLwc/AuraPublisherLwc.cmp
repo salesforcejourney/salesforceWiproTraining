@@ -1,0 +1,19 @@
+<aura:component
+  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <lightning:messageChannel
+    type="sampleMessage__c"
+    aura:id="samplemessage"
+  ></lightning:messageChannel>
+
+  <lightning:card title="Aura Publisher" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Publisher to LWC"
+        variant="brand"
+        onclick="{!c.clickHandler}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+</aura:component>

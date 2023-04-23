@@ -1,0 +1,24 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,force:hasSObjectName,force:hasRecordId"
+>
+  <lightning:card
+    title="Force Events to Create and Edit"
+    iconName="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Create Record"
+        variant="brand"
+        onclick="{!c.createClickHandler}"
+      ></lightning:button>
+    </div>
+
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Edit Record"
+        variant="brand"
+        onclick="{!c.editClickHandler}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+</aura:component>

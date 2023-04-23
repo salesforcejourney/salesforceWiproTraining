@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+  <lightning:Card title="Dynamic Calculator" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Show Calculator"
+        variant="brand"
+        onclick="{!c.clickHandler}"
+      ></lightning:button>
+    </div>
+    <div class="slds-var-m-around_medium">{!v.body}</div>
+  </lightning:Card>
+</aura:component>

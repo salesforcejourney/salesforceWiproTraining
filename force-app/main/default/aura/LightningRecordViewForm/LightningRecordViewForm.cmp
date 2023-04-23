@@ -1,0 +1,23 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,force:hasSObjectName,force:hasRecordId"
+>
+  <lightning:card title="Lighting Record View Form" iconName="custom:custom14">
+    <lightning:recordViewForm
+      recordId="{!v.recordId}"
+      objectApiName="{!v.sObjectName}"
+    >
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_2-of-4">
+          <lightning:outputField fieldName="Name"></lightning:outputField>
+          <lightning:outputField fieldName="Rating"></lightning:outputField>
+        </div>
+        <div class="slds-col slds-size_2-of-4">
+          <lightning:outputField fieldName="Industry"></lightning:outputField>
+          <lightning:outputField
+            fieldName="AnnualRevenue"
+          ></lightning:outputField>
+        </div>
+      </div>
+    </lightning:recordViewForm>
+  </lightning:card>
+</aura:component>

@@ -1,0 +1,46 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId">
+  <lightning:recordEditForm
+    aura:id="recordEditForm"
+    objectApiName="Contact"
+    onload="{!c.loadEventHandler}"
+    onsuccess="{!c.successHandler}"
+    onerror="{!c.errorHandler}"
+    onsubmit="{!c.submitHandler}"
+  >
+    <lightning:messages></lightning:messages>
+    <div class="slds-var-m-around_small">
+      <lightning:inputField
+        aura:id="field"
+        fieldName="Name"
+      ></lightning:inputField>
+      <lightning:inputField
+        aura:id="email"
+        fieldName="Email"
+      ></lightning:inputField>
+      <lightning:inputField
+        aura:id="field"
+        fieldName="Phone"
+      ></lightning:inputField>
+      <lightning:inputField
+        aura:id="accountname"
+        fieldName="AccountId"
+      ></lightning:inputField>
+      <lightning:inputField
+        aura:id="field"
+        fieldName="Title"
+      ></lightning:inputField>
+    </div>
+    <div class="slds-var-m-around_small slds-text-align_right">
+      <lightning:button
+        label="Reset"
+        variant="brand"
+        onclick="{!c.resetHandler}"
+      ></lightning:button>
+      <lightning:button
+        label="Save"
+        type="submit"
+        variant="brand"
+      ></lightning:button>
+    </div>
+  </lightning:recordEditForm>
+</aura:component>

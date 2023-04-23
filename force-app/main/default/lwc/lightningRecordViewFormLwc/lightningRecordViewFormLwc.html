@@ -1,0 +1,26 @@
+<template>
+  <lightning-card
+    title="Lightning Record View Form"
+    icon-name="custom:custom14"
+  >
+    <lightning-record-view-form
+      object-api-name={objectApiName}
+      record-id={recordId}
+    >
+      <div class="slds-var-m-around_small">
+        <lightning-output-field
+          field-name={accfields.namefield}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={accfields.industryfield}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={accfields.ratingfield}
+        ></lightning-output-field>
+        <lightning-output-field
+          field-name={accfields.annualfield}
+        ></lightning-output-field>
+      </div>
+    </lightning-record-view-form>
+  </lightning-card>
+</template>

@@ -1,0 +1,68 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <!--Attributes-->
+  <aura:attribute name="Number1" type="Integer" default="0"></aura:attribute>
+  <aura:attribute name="Number2" type="Integer" default="0"></aura:attribute>
+  <aura:attribute name="result" type="Integer" default="0"></aura:attribute>
+  <aura:attribute
+    name="showresult"
+    type="boolean"
+    default="false"
+  ></aura:attribute>
+
+  <!--Body-->
+  <lightning:card title="Calculator" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <p class="slds-text-heading_small">Enter Number 1</p>
+      <lightning:input
+        type="number"
+        name="number1"
+        label="Enter Number 1"
+        value="{!v.Number1}"
+        required="true"
+        variant="label-hidden"
+      />
+      <lightning:input
+        type="number"
+        name="number2"
+        label="Enter Number 2"
+        value="{!v.Number2}"
+        required="true"
+      />
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Add"
+        variant="brand"
+        onclick="{!c.calHandler}"
+      ></lightning:button>
+      <lightning:button
+        label="Sub"
+        variant="brand"
+        onclick="{!c.calHandler}"
+      ></lightning:button>
+      <lightning:button
+        label="Mul"
+        variant="brand"
+        onclick="{!c.calHandler}"
+      ></lightning:button>
+      <lightning:button
+        label="Div"
+        variant="brand"
+        onclick="{!c.calHandler}"
+      ></lightning:button>
+    </div>
+    <aura:if isTrue="{!v.showresult}">
+      <div class="slds-var-m-around_small">
+        <p>
+          Result :
+          <lightning:formattedNumber
+            value="{!v.result}"
+          ></lightning:formattedNumber>
+        </p>
+      </div>
+    </aura:if>
+  </lightning:card>
+</aura:component>

@@ -1,0 +1,32 @@
+<template>
+  <lightning-card title="Parent Api Calculator" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Enter Number 1"
+        onchange={chanegeHandler}
+        name="number1"
+      ></lightning-input>
+      <lightning-input
+        label="Enter Number 2"
+        onchange={chanegeHandler}
+        name="number2"
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Add"
+        variant="brand"
+        onclick={clickHandler}
+      ></lightning-button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <c-child-calculator-api-method
+        onaddresult={resultHandler}
+        lwc:ref="calculate"
+      ></c-child-calculator-api-method>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-formatted-number value={result}></lightning-formatted-number>
+    </div>
+  </lightning-card>
+</template>

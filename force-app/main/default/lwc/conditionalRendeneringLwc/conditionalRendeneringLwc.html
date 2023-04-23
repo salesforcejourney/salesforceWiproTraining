@@ -1,0 +1,33 @@
+<template>
+  <lightning-card title="Conditional Rendering" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        type="checkbox"
+        label="Show Details"
+        onchange={changeHandler}
+      ></lightning-input>
+    </div>
+    <h2 class="slds-var-m-around_small">
+      Conditional Rendering using template if:true
+    </h2>
+    <div class="slds-var-m-around_small">
+      <template if:true={showDetails}>
+        <p>Welcome to learn LWC</p>
+      </template>
+      <template if:false={showDetails}>
+        <p>You are not authorized for this training</p>
+      </template>
+    </div>
+    <h2 class="slds-var-m-around_small">
+      Conditional Rendering using template lwc:true
+    </h2>
+    <div class="slds-var-m-around_small">
+      <template lwc:if={showDetails}>
+        <p>Welcome to learn LWC</p>
+      </template>
+      <template lwc:else>
+        <p>You are not authorized for this training</p>
+      </template>
+    </div>
+  </lightning-card>
+</template>

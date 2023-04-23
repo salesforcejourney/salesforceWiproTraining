@@ -1,0 +1,21 @@
+<template>
+  <lightning-card title="Wire With Parameters" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Search By Industry"
+        placeholder="Enter Industry Name"
+        onchange={changeHandler}
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <template lwc:if={accounts.data}>
+        <template for:each={accounts.data} for:item="account">
+          <p key={account.Id}>{account.Name}</p>
+        </template>
+      </template>
+      <template lwc:elseif={accounts.error}>
+        <p>{accounts.error}</p>
+      </template>
+    </div>
+  </lightning-card>
+</template>

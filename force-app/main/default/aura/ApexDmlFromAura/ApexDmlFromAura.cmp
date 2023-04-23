@@ -1,0 +1,74 @@
+<aura:component
+  controller="AccountHelper"
+  implements="flexipage:availableForAllPageTypes"
+>
+  <!--Aura Attribute-->
+  <aura:attribute
+    name="industryOptions"
+    type="List"
+    default="[]"
+  ></aura:attribute>
+
+  <aura:attribute
+    name="acc"
+    type="Account"
+    default="{
+        'sobjectType' : 'Account',
+        'Name' : '',
+        'Phone' : '',
+        'AccountNumber':'',
+        'Industry' :''}"
+  ></aura:attribute>
+
+  <!--Aura Handler-->
+  <aura:handler
+    name="init"
+    value="{!this}"
+    action="{!c.initHandler}"
+  ></aura:handler>
+
+  <!--Body-->
+  <lightning:card title="Create Account using Apex" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning:input
+        label="Account Name"
+        required="true"
+        value="{!v.acc.Name}"
+        messageWhenValueMissing="Account name is mandatory"
+      ></lightning:input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:input
+        label="Phone"
+        value="{!v.acc.Phone}"
+        pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+        messageWhenPatternMismatch="Kindly enter the phone number in expected format"
+      ></lightning:input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:input
+        label="Account Number"
+        value="{!v.acc.AccountNumber}"
+        minlength="5"
+        maxlength="10"
+        messageWhenTooShort="Minimum length of Account number is 5"
+        messageWhenTooLong="Maximum length of Account number is 10"
+      ></lightning:input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:combobox
+        label="Industry"
+        value="{!v.acc.Industry}"
+        placeholder="Select Industry"
+        options="{! v.industryOptions }"
+      />
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Create Account"
+        variant="brand"
+        onclick="{!c.createHandler}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+</aura:component>

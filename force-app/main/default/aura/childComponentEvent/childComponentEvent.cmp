@@ -1,0 +1,16 @@
+<aura:component>
+  <!--Aura Register Events-->
+  <aura:registerEvent
+    name="messageaura"
+    type="c:MessageAuraEvent"
+  ></aura:registerEvent>
+
+  <!--Body-->
+  <lightning:card title="Child Component" iconName="custom:custom17">
+    <lightning:button
+      label="Send Message"
+      variant="brand"
+      onclick="{!c.clickHandler}"
+    ></lightning:button>
+  </lightning:card>
+</aura:component>

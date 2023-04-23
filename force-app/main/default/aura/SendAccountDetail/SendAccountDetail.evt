@@ -1,0 +1,6 @@
+<aura:event
+  type="COMPONENT"
+  description="This event is used to send the details to the component"
+>
+  <aura:attribute name="accname" type="String"></aura:attribute>
+</aura:event>

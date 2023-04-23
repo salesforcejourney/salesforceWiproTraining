@@ -1,0 +1,82 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <ltng:require styles="{!$Resource.cssstyling}"></ltng:require>
+
+  <lightning:card title="Inline CSS" iconName="custom:custom14">
+    <h1
+      style="
+        background-color: blue;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      "
+    >
+      Welcome to learn Aura - Inline CSS
+    </h1>
+    <h1>Welcome to learn Aura - CSS Demo</h1>
+  </lightning:card>
+
+  <lightning:card title="External CSS" iconName="custom:custom14">
+    <h1 class="formattag">Welcome to learn Aura - Inline CSS</h1>
+    <h1 class="formattag">Welcome to learn Aura - CSS Demo</h1>
+  </lightning:card>
+
+  <p class="outsidecard">CSS outside the card</p>
+
+  <lightning:card title="Third Party CSS" iconName="custom:custom14">
+    <p class="animate__animated animate__backInDown animate__delay-5s">
+      Learning CSS using Third party library
+    </p>
+  </lightning:card>
+
+  <lightning:card
+    title="Add , Remove and toggle class"
+    iconName="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <p aura:id="dynamiccss">Add Class Based on action</p>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Add Class"
+        variant="brand"
+        onclick="{!c.addClassHandler}"
+      ></lightning:button>
+      <lightning:button
+        label="Remove Class"
+        variant="brand"
+        onclick="{!c.removeClassHandler}"
+      ></lightning:button>
+      <lightning:button
+        label="Toggle Class"
+        variant="brand"
+        onclick="{!c.toggleClassHandler}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+
+  <lightning:card title="Dynamic Display using CSS" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <p class="dynamicDisplay" aura:id="dynamicdisplay">
+        Add Class Based on action
+      </p>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Hide Component"
+        variant="brand"
+        onclick="{!c.hideClassHandler}"
+      ></lightning:button>
+      <lightning:button
+        label="Display Component"
+        variant="brand"
+        onclick="{!c.displayClassHandler}"
+      ></lightning:button>
+      <lightning:button
+        label="Toggle Component"
+        variant="brand"
+        onclick="{!c.toggleDisplayClassHandler}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+</aura:component>

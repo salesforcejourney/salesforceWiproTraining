@@ -1,0 +1,60 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,force:hasSObjectName,force:hasRecordId"
+>
+  <!--Aura Attribtutes-->
+  <aura:attribute name="newAccount" type="Object"></aura:attribute>
+  <aura:attribute name="simpleRecord" type="Object"></aura:attribute>
+  <aura:attribute name="targetError" type="String"></aura:attribute>
+
+  <!--Initialize the record template whenever form is loading -->
+  <aura:handler
+    name="init"
+    value="{!this}"
+    action="{!c.initHandler}"
+  ></aura:handler>
+
+  <force:recordData
+    aura:id="recordHandler"
+    fields="Name,BillingCity,BillingState"
+    targetRecord="{!v.newAccount}"
+    targetFields="{!v.simpleRecord}"
+    targetError="{!v.targetError}"
+  >
+  </force:recordData>
+  <lightning:card
+    title="Force Record Data to Create new Record"
+    iconName="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <lightning:input
+        type="text"
+        label="Account Name"
+        value="{!v.simpleRecord.Name}"
+        required="true"
+      ></lightning:input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:input
+        type="text"
+        label="Billing City"
+        value="{!v.simpleRecord.BillingCity}"
+        required="true"
+      ></lightning:input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:input
+        type="text"
+        label="Billing State"
+        value="{!v.simpleRecord.BillingState}"
+        required="true"
+      ></lightning:input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Save"
+        variant="brand"
+        onclick="{!c.clickHandler}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+</aura:component>

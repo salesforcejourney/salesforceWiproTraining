@@ -1,0 +1,17 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <lightning:card title="Parent Aura Method" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        variant="brand"
+        label="Invoke Child Method"
+        onclick="{!c.clickHandler}"
+      ></lightning:button>
+    </div>
+    <div>
+      <c:ChildAuraMethod aura:id="child"></c:ChildAuraMethod>
+    </div>
+  </lightning:card>
+</aura:component>

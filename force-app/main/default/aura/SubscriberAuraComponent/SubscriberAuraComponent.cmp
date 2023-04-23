@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+  <!--Aura Attributes-->
+  <aura:attribute
+    name="publisherMessage"
+    type="String"
+    default=""
+  ></aura:attribute>
+
+  <!--Aura Handler-->
+  <aura:handler
+    event="c:MessageApplicationEvent"
+    action="{!c.applicationEventHandler}"
+  ></aura:handler>
+  <!--Body-->
+  <lightning:card title="Subscriber Aura Component" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning:formattedText
+        value="{!v.publisherMessage}"
+      ></lightning:formattedText>
+    </div>
+  </lightning:card>
+</aura:component>

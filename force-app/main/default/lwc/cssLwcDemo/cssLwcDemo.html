@@ -1,0 +1,80 @@
+<template>
+  <lightning-card title="Inline Styling" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <div style="color: red; font-size: 20px">
+        Welcome to learn Inline Style
+      </div>
+    </div>
+  </lightning-card>
+  <lightning-card title="External CSS" icon-name="custom:custom15">
+    <div class="slds-var-m-around_small">
+      <h1>Welcome to learn Inline Style - html tag</h1>
+      <div class="training lwc">Ojas Training for LWC</div>
+    </div>
+  </lightning-card>
+  <lightning-card title="Lightning Design System" icon-name="custom:custom16">
+    <div class="slds-var-m-around_small">
+      <div class="slds-badge slds-theme_warning">Learning LWC</div>
+      <lightning-button-icon
+        icon-name="utility:settings"
+        alternative-text="Settings"
+        title="Settings"
+        aria-label="Setting"
+      ></lightning-button-icon>
+    </div>
+  </lightning-card>
+  <lightning-card title="Shared CSS" icon-name="custom:custom16">
+    <div class="slds-var-m-around_small">
+      <div class="wrapper">
+        <div class="skills javascript">Javascript Skills</div>
+      </div>
+    </div>
+  </lightning-card>
+  <lightning-card title="Dynamic CSS using Getter" icon-name="custom:custom17">
+    <div class="slds-var-m-around_small">
+      <div class={box}>Dynamic CSS using Getter/Property</div>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Add Class"
+        variant="brand"
+        onclick={addClassHandler}
+      ></lightning-button>
+      <lightning-button
+        label="Remove Class"
+        variant="brand"
+        onclick={removeClassHandler}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+  <lightning-card
+    title="Dynamic CSS using Dom Selector"
+    icon-name="custom:custom17"
+  >
+    <div class="slds-var-m-around_small">
+      <div class="domselector">Dynamic CSS using Dom Selector</div>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Add Class"
+        variant="brand"
+        onclick={addClassDomHandler}
+      ></lightning-button>
+      <lightning-button
+        label="Remove Class"
+        variant="brand"
+        onclick={removeClassDomHandler}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+  <lightning-card title="Design Token" icon-name="custom:custom18">
+    <div class="slds-var-m-around_small">
+      <p class="designtokendemo">Welcome to learn Design Token</p>
+    </div>
+  </lightning-card>
+  <lightning-card title="Style Token" icon-name="custom:custom18">
+    <div class="slds-var-m-around_small">
+      <lightning-button label="Click Me" class="btnclass"></lightning-button>
+    </div>
+  </lightning-card>
+</template>

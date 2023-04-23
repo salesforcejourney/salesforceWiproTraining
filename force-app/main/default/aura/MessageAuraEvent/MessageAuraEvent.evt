@@ -1,0 +1,6 @@
+<aura:event
+  type="COMPONENT"
+  description="This event will be used to send the message from child to parent"
+>
+  <aura:attribute name="message" type="String"></aura:attribute>
+</aura:event>

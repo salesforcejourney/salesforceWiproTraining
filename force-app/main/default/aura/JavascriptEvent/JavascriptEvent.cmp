@@ -1,0 +1,22 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <!--Attribute-->
+  <aura:attribute
+    name="message"
+    type="String"
+    default="Welcome"
+  ></aura:attribute>
+
+  <!--Body-->
+  <lightning:card title="Javascript Events" iconName="custom:custom14">
+    <lightning:input
+      aura:id="input"
+      class="slds-var-m-around_small"
+      label="Enter Text"
+      onchange="{!c.changehandler}"
+    ></lightning:input>
+    <div class="slds-var-m-around_small">{!v.message}</div>
+  </lightning:card>
+</aura:component>

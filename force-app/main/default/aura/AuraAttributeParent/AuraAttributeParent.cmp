@@ -1,0 +1,29 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <aura:attribute
+    name="parentboundvariable"
+    type="String"
+    default="Welcome"
+  ></aura:attribute>
+
+  <aura:attribute
+    name="parentunboundvariable"
+    type="String"
+    default="Hello"
+  ></aura:attribute>
+
+  <lightning:card title="Aura Attribute Parent" iconName="custom:custom14">
+    <p class="slds-var-m-around_small">I am Parent Component</p>
+    <div class="slds-var-m-around_small">
+      <p>parentboundvariable : {!v.parentboundvariable}</p>
+      <p>parentunboundvariable : {!v.parentunboundvariable}</p>
+    </div>
+  </lightning:card>
+
+  <c:AuraAttributeChild
+    childboundvariable="{!v.parentboundvariable}"
+    childunboundvariable="{#v.parentunboundvariable}"
+  ></c:AuraAttributeChild>
+</aura:component>

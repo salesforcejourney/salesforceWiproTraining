@@ -1,0 +1,22 @@
+<aura:component
+  controller="AccountHelper"
+  implements="flexipage:availableForAllPageTypes"
+>
+  <!--Attribute-->
+  <aura:attribute name="Accounts" type="Account[]"></aura:attribute>
+  <!--Handler-->
+  <aura:handler
+    name="init"
+    value="{!this}"
+    action="{!c.loadAccounts}"
+  ></aura:handler>
+
+  <!--Body-->
+  <lightning:card title="Get Account by Industry" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <aura:iteration items="{!v.Accounts}" var="acc">
+        <p class="slds-var-m-around_x-small">{!acc.Name}</p>
+      </aura:iteration>
+    </div>
+  </lightning:card>
+</aura:component>

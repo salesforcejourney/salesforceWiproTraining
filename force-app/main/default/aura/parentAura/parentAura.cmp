@@ -1,0 +1,17 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <aura:attribute name="message" type="String" default=""></aura:attribute>
+  <lightning:card title="Aura to LWC Communication" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <c:childLwc
+        onsendmsg="{!c.sendMessageHandler}"
+        message="Welcome from Aura Component"
+      ></c:childLwc>
+    </div>
+    <div class="slds-var-m-around_small">
+      <p>Message from LWC : {!v.message}</p>
+    </div>
+  </lightning:card>
+</aura:component>

@@ -1,0 +1,24 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <aura:attribute name="showme" type="boolean" default="false"></aura:attribute>
+
+  <lightning:card title="Aura If" iconName="custom:custom14">
+    <lightning:input
+      class="slds-var-m-around_small"
+      type="checkbox"
+      label="Show Text"
+      checked="{!v.showme}"
+    ></lightning:input>
+
+    <div class="slds-var-p-around_small">
+      <aura:if isTrue="{!v.showme}">
+        <p>You are authorized to see the content</p>
+        <aura:set attribute="else">
+          <p>You are not authorized</p>
+        </aura:set>
+      </aura:if>
+    </div>
+  </lightning:card>
+</aura:component>

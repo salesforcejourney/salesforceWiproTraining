@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+  <!--Attributes-->
+  <aura:attribute name="todaysDate" type="String"></aura:attribute>
+  <!--Load External JS-->
+  <ltng:require
+    scripts="{!$Resource.moment}"
+    afterScriptsLoaded="{!c.scriptHandler}"
+  >
+  </ltng:require>
+  <lightning:Card title="External JS File" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Show Current Date"
+        variant="brand"
+        onclick="{!c.clickHandler}"
+      ></lightning:button>
+    </div>
+    <div class="slds-var-m-around_small">{!v.todaysDate}</div>
+  </lightning:Card>
+</aura:component>

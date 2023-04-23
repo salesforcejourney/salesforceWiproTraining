@@ -1,0 +1,39 @@
+<template>
+  <lightning-card
+    title="Query Selector and Query Selector All"
+    icon-name="custom:custom14"
+  >
+    <h1>Query Selector Demo</h1>
+    <div class="slds-var-m-around_small">
+      <lightning-input label="My Firstname"></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        lwc:ref="inputlastname"
+        label="My Lastname"
+        class="enteredlast"
+        data-id="lastname"
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        variant="brand"
+        label="Get Input Values"
+        onclick={clickHandler}
+      ></lightning-button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <h1>Query Selector All Demo</h1>
+      <template for:each={carList} for:item="car">
+        <p class="carname" key={car}>{car}</p>
+      </template>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        variant="brand"
+        label="Access Cars"
+        onclick={carHandler}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

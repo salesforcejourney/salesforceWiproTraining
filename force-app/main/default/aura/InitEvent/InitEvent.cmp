@@ -1,0 +1,23 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <!--Attribute-->
+  <aura:attribute name="Welcome" type="String"></aura:attribute>
+
+  <!--Handler-->
+  <aura:handler
+    name="init"
+    value="{!this}"
+    action="{!c.initHandler}"
+  ></aura:handler>
+
+  <!--Body-->
+  <lightning:card title="Init Event" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <p>
+        <lightning:formattedText value="{!v.Welcome}" />
+      </p>
+    </div>
+  </lightning:card>
+</aura:component>

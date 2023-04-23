@@ -1,0 +1,71 @@
+<template>
+  <lightning-card
+    title="Lightning Record Edit form - Create"
+    icon-name="custom:custom14"
+  >
+    <lightning-record-edit-form
+      object-api-name={objectApiName}
+      onsuccess={successHandler}
+      onsubmit={submitHandler}
+      onerror={errorHandler}
+    >
+      <div class="slds-var-m-around_small">
+        <lightning-input-field
+          field-name={accfields.namefield}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={accfields.industryfield}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={accfields.ratingfield}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={accfields.annualfield}
+        ></lightning-input-field>
+      </div>
+      <div class="slds-var-m-around_small">
+        <lightning-button
+          type="submit"
+          variant="brand"
+          label="Save Account"
+        ></lightning-button>
+        <lightning-button
+          variant="brand"
+          label="Cancel"
+          onclick={resetHandler}
+        ></lightning-button>
+      </div>
+    </lightning-record-edit-form>
+  </lightning-card>
+  <lightning-card
+    title="Lightning Record Edit form - Edit"
+    icon-name="custom:custom14"
+  >
+    <lightning-record-edit-form
+      object-api-name={objectApiName}
+      record-id={recordId}
+    >
+      <div class="slds-var-m-around_small">
+        <lightning-input-field
+          field-name={accfields.namefield}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={accfields.industryfield}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={accfields.ratingfield}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={accfields.annualfield}
+        ></lightning-input-field>
+      </div>
+      <div class="slds-var-m-around_small">
+        <lightning-button
+          type="submit"
+          variant="brand"
+          label="Save Account"
+        ></lightning-button>
+      </div>
+    </lightning-record-edit-form>
+  </lightning-card>
+</template>

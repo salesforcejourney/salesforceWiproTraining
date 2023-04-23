@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+<!--Add attribute of type String-->
+<aura:attribute name="Technology" type="String" default="Aura Lightning"></aura:attribute>
+<!--Add attribute of type Array-->
+<aura:attribute name = "colors" type="String[]" default="['red','blue','orange']"></aura:attribute>
+<!--Add attribute of type List-->
+<aura:attribute name = "holidays" type="List" default="['Diwali','New Year','Christmas']"></aura:attribute>
+<!--Add attribute of type Set-->
+<aura:attribute name = "Months" type="Set" default="['Jan','Feb','Mar']"></aura:attribute>
+<!--Add attribute of type Map-->
+<aura:attribute name = "MonthsNoWithName" type="Map" default="{1:'Jan',2:'Feb',3:'Mar'}"></aura:attribute>
+
+
+<lightning:card title="Aura Attributes" iconName = "custom:custom14">
+    <p class="slds-var-p-around_small">{!v.Technology}</p> 
+</lightning:card>
+</aura:component>	

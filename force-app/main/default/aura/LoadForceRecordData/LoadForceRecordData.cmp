@@ -1,0 +1,45 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,force:hasSObjectName,force:hasRecordId"
+>
+  <aura:attribute name="simepleRecord" type="Object"></aura:attribute>
+  <aura:attribute name="recordError" type="String"></aura:attribute>
+
+  <force:recordData
+    fields="Name,BillingCity,BillingState,Industry"
+    recordId="{!v.recordId}"
+    targetFields="{!v.simepleRecord}"
+    targetError="{!v.recordError}"
+    recordUpdated="{!c.handleRecordUpdated}"
+  ></force:recordData>
+  <lightning:card
+    title="Load Record Using Force Data"
+    iconName="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <p>
+        Account Name :
+        <lightning:formattedText
+          value="{!v.simepleRecord.Name}"
+        ></lightning:formattedText>
+      </p>
+      <p>
+        Billing City :
+        <lightning:formattedText
+          value="{!v.simepleRecord.BillingCity}"
+        ></lightning:formattedText>
+      </p>
+      <p>
+        Billing State :
+        <lightning:formattedText
+          value="{!v.simepleRecord.BillingState}"
+        ></lightning:formattedText>
+      </p>
+      <p>
+        Industry :
+        <lightning:formattedText
+          value="{!v.simepleRecord.Industry}"
+        ></lightning:formattedText>
+      </p>
+    </div>
+  </lightning:card>
+</aura:component>

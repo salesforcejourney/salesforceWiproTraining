@@ -1,0 +1,31 @@
+<design:component label="Design Demo Using Aura">
+  <design:attribute
+    name="MaxRecords"
+    label="Number of Records to Display"
+    description="Enter No of records to load while configuring the component"
+    default="3"
+    min="1"
+    max="500"
+    placeholder="Enter number of records to load"
+    required="true"
+  ></design:attribute>
+  <design:attribute
+    name="showComponent"
+    label="Display this component"
+    default="true"
+  ></design:attribute>
+  <design:attribute
+    name="region"
+    label="Select Region"
+    datasource="APAC,AMER,EUROPE"
+    default="AMER"
+  >
+  </design:attribute>
+  <design:supportedFormFactors>
+    <design:supportedFormFactor type="Large"></design:supportedFormFactor>
+    <design:supportedFormFactor type="Small"></design:supportedFormFactor>
+  </design:supportedFormFactors>
+  <sfdc:objects>
+    <sfdc:object>Account</sfdc:object>
+  </sfdc:objects>
+</design:component>

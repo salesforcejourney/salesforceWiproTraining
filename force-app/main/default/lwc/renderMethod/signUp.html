@@ -1,0 +1,38 @@
+<template>
+  <lightning-card title="Sign-Up" icon-name="custom:custom15">
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        type="email"
+        label="Username"
+        placeholder="Enter email address"
+      ></lightning-input>
+      <lightning-input
+        type="password"
+        label="Password"
+        placeholder="Enter Password"
+      ></lightning-input>
+      <lightning-input
+        type="tel"
+        label="Phone"
+        placeholder="Enter Contact Details"
+      ></lightning-input>
+      <lightning-input
+        type="text"
+        label="Address"
+        placeholder="Enter Address"
+      ></lightning-input>
+    </div>
+    <lightning-button
+      label="back"
+      variant="brand"
+      onclick={clickHandler}
+      class="slds-var-m-around_small"
+    ></lightning-button>
+    <lightning-button
+      label="Sign Up"
+      variant="brand"
+      onclick={submitHandler}
+      class="slds-var-m-around_small"
+    ></lightning-button>
+  </lightning-card>
+</template>

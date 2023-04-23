@@ -1,0 +1,16 @@
+<apex:page>
+    <apex:includeLightning></apex:includeLightning>
+    <div id = "lightningButton"></div>
+
+    <script>
+        $Lightning.use("c:LightningButtonApp",function(){
+            $Lightning.createComponent("lightning:button",{
+                label :'Click Me',
+                variant : "brand"
+            },"lightningButton",function(){
+                //post actions
+                console.log('Component Inserted')
+            })
+        })
+    </script>
+</apex:page>

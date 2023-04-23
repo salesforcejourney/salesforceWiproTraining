@@ -1,0 +1,26 @@
+<template>
+  <c-lwc-calculator></c-lwc-calculator>
+  <lightning-card
+    title="Generate Full Name using Getter"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Enter Firstname"
+        onchange={changeHandler}
+        name="fname"
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Enter Lastname"
+        onchange={changeHandler}
+        name="lname"
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      Full Name :
+      <lightning-formatted-text value={fullname}></lightning-formatted-text>
+    </div>
+  </lightning-card>
+</template>

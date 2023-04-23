@@ -1,0 +1,28 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <!--atrribute-->
+  <aura:attribute name="showme" type="boolean" default="false"></aura:attribute>
+  <!--handlers -->
+  <aura:handler
+    name="init"
+    value="{!this}"
+    action="{!c.inithandler}"
+  ></aura:handler>
+  <aura:handler
+    name="render"
+    value="{!this}"
+    action="{!c.renderhandler}"
+  ></aura:handler>
+  <!--Body-->
+  <lightning:card title="Init vs Render" iconName="custom:custom14">
+    <lightning:input
+      class="slds-var-p-around_small"
+      type="checkbox"
+      label="Click Me"
+      checked="{!v.showme}"
+    >
+    </lightning:input>
+  </lightning:card>
+</aura:component>

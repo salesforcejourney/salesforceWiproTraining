@@ -1,0 +1,25 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,force:hasSObjectName,force:hasRecordId"
+>
+  <aura:attribute name="recordError" type="String"></aura:attribute>
+
+  <force:recordData
+    aura:id="recordHandler"
+    fields="Id"
+    recordId="{!v.recordId}"
+    targetError="{!v.recordError}"
+    recordUpdated="{!c.handleRecordUpdated}"
+  ></force:recordData>
+  <lightning:card
+    title="Force Record Data to Delete the record"
+    iconName="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        label="Delete Account"
+        variant="brand"
+        onclick="{!c.clickHandler}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+</aura:component>

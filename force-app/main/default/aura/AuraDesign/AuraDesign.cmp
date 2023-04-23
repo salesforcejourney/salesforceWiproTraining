@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+  <!--Attributes-->
+  <aura:attribute name="MaxRecords" type="Integer"></aura:attribute>
+  <aura:attribute name="region" type="String"></aura:attribute>
+  <aura:attribute name="showComponent" type="boolean"></aura:attribute>
+  <lightning:card
+    title="Aura Design Demo"
+    iconName="custom:custom14"
+  ></lightning:card
+></aura:component>

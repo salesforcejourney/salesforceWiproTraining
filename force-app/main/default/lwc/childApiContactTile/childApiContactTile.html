@@ -1,0 +1,16 @@
+<template>
+  <div class="c-container">
+    <lightning-layout vertical-align="center" class="large">
+      <lightning-layout-item flexibility="auto" padding="around-small">
+        <div class="custom-box">
+          <p>{contact.firstname} {contact.lastname}</p>
+          <p>
+            <lightning-formatted-email
+              value={contact.email}
+            ></lightning-formatted-email>
+          </p>
+        </div>
+      </lightning-layout-item>
+    </lightning-layout>
+  </div>
+</template>

@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="Parent API Method" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <c-child-api-method
+        lwc:ref="childapimethod"
+        message="Hello from Parent Component"
+      ></c-child-api-method>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Call Child Method"
+        onclick={clickHandler}
+        variant="brand"
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

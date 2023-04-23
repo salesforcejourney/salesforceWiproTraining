@@ -1,0 +1,63 @@
+<template>
+  <lightning-card title="getOjectInfo" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <template lwc:if={accountObjectDetails}>
+        <p>{accountObjectDetails.apiName}</p>
+        <p>{accountObjectDetails.fields.AccountNumber.apiName}</p>
+        <p>{accountObjectDetails.defaultRecordTypeId}</p>
+      </template>
+    </div>
+  </lightning-card>
+  <lightning-card title="getOjectInfos" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <template lwc:if={multiObjectDetails}>
+        <template for:each={multiObjectDetails.results} for:item="obj">
+          <p key={obj.result.apiName}>{obj.result.apiName}</p>
+        </template>
+      </template>
+    </div>
+  </lightning-card>
+  <lightning-card title="getPicklistValues" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-combobox
+        label="Industry"
+        options={industryOptions}
+        value={selectedIndustry}
+        onchange={changeHandler}
+        name="industry"
+      ></lightning-combobox>
+    </div>
+    <div class="slds-var-m-around_small">
+      Selected Industry : {selectedIndustry}
+    </div>
+  </lightning-card>
+  <lightning-card
+    title="getPicklistValuesByRecordType"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <lightning-combobox
+        label="Account Source"
+        options={accountSourceOptions}
+        value={selectedAccountSource}
+        onchange={changeHandler}
+        name="accountsource"
+      ></lightning-combobox>
+    </div>
+    <div class="slds-var-m-around_small">
+      Selected Account Source : {selectedAccountSource}
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-combobox
+        label="Account Rating"
+        options={ratingOptions}
+        value={selectedRating}
+        onchange={changeHandler}
+        name="accountrating"
+      ></lightning-combobox>
+    </div>
+    <div class="slds-var-m-around_small">
+      Selected Account Rating : {selectedRating}
+    </div>
+  </lightning-card>
+</template>

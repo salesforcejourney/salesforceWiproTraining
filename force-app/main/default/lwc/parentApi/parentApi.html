@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="Parent Component">
+    <div class="slds-var-m-around_small">
+      <p>I am Parent Component</p>
+    </div>
+    <div class="slds-var-m-around_small">
+      <c-child-api
+        contactlastname={lastname}
+        account-last-name={accountname}
+        contact-from-parent={contact}
+        show-details
+      ></c-child-api>
+    </div>
+  </lightning-card>
+</template>

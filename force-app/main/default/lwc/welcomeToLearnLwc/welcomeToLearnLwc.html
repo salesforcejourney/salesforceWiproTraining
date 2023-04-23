@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title={cutomtitle} icon-name="custom:custom14">
+    <p class="slds-p-horizontal_small">Welcome to learn LWC</p>
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Enter Title"
+        name="titlename"
+        onchange={changeHandler}
+      ></lightning-input>
+    </div>
+    <div>
+      <div class="output slds-var-m-around_small">{cutomtitle}</div>
+    </div>
+  </lightning-card>
+</template>

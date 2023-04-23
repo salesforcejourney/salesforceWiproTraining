@@ -1,0 +1,18 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+  <!--Register Event-->
+  <aura:registerEvent
+    name="publisherComponent"
+    type="c:MessageApplicationEvent"
+  ></aura:registerEvent>
+
+  <!--Body-->
+  <lightning:card title="Publisher Aura Component" iconName="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning:button
+        variant="brand"
+        label="Publish Message"
+        onclick="{!c.clickHandler}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+</aura:component>

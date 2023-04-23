@@ -1,0 +1,30 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+  access="global"
+>
+  <!--Step 1 -->
+  <lightning:navigation aura:id="navid"></lightning:navigation>
+  <lightning:card title="Lightning Navigation" iconName="custom:custom14">
+    <div class="slds-var-p-around_small">
+      <lightning:button
+        variant="brand"
+        label="Navigate to Home Page"
+        onclick="{!c.homeNavigation}"
+      ></lightning:button>
+    </div>
+    <div class="slds-var-p-around_small">
+      <lightning:button
+        variant="brand"
+        label="Navigate to Account Page"
+        onclick="{!c.accountNavigation}"
+      ></lightning:button>
+    </div>
+    <div class="slds-var-p-around_small">
+      <lightning:button
+        variant="brand"
+        label="Navigate to Next week Accounts"
+        onclick="{!c.nextWeekaccountNavigation}"
+      ></lightning:button>
+    </div>
+  </lightning:card>
+</aura:component>

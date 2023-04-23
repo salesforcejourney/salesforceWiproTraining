@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This message channel will be used to communicate two Aura Components.</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>This attribute is used to send the message over LMS</description>
+        <fieldName>lmsData</fieldName>
+    </lightningMessageFields>
+    <masterLabel>AuraMessageChannel</masterLabel>
+</LightningMessageChannel>

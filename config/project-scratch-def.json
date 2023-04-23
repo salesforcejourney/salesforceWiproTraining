@@ -1,0 +1,19 @@
+{
+  "orgName": "MyCompany",
+  "edition": "Developer",
+  "features": ["Communities", "ServiceCloud", "Chatbot"],
+  "settings": {
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    }
+  },
+  "objectSettings": {
+    "opportunity": {
+      "sharingModel": "private",
+      "defaultRecordType": "default"
+    },
+    "account": {
+      "defaultRecordType": "default"
+    }
+  }
+}
